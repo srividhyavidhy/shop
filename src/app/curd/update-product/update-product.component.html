@@ -1,0 +1,40 @@
+<div class="model-body">
+          <div class="container ">
+              <div class="row bg-success">
+                  <div class="col-5">
+                      <label for="_id">ID</label>
+                      <input [(ngModel)]="productsobj._id" type="_id" class="form-control">
+                      
+                      <label for="store_id">Store_Id</label>
+                      <input [(ngModel)]="productsobj.store_id" type="store_id" class="form-control" placeholder="Store_Id">
+                      
+                      <label for="vendorName">VendorName</label>
+                      <input [(ngModel)]="productsobj.vendorName" type="text" class="form-control" placeholder="VendorName">
+                      
+                      <label for="name">Name</label>
+                      <input [(ngModel)]="productsobj.name" type="text" class="form-control" placeholder="Name">
+                      
+                      <label for="productDescription">ProductDescription</label>
+                      <input [(ngModel)]="productsobj.productDescription" type="text" class="form-control" placeholder="ProductDescription">
+                      
+                      <label for="price">Price</label>
+                      <input [(ngModel)]="productsobj.price" type="price" class="form-control" placeholder="Price">
+                      
+                      <label for="categoryName">CategoryName</label>
+                      <input [(ngModel)]="productsobj.categoryName" type="text" class="form-control" placeholder="CategoryName">
+                      
+                      <label for="deliveryTimeSpan">deliveryTimeSpan</label>
+                      <input [(ngModel)]="productsobj.deliveryTimeSpan" type="text" class="form-control" placeholder="Price">
+                      
+                      <label for="sub_cat_name">sub_cat_name</label>
+                      <input [(ngModel)]="productsobj.sub_cat_name" type="text" class="form-control" placeholder="Sub_Cat_Name">
+                      
+                      <label for="images">Images</label>
+                      <input [(ngModel)]="productsobj.images" type="text" class="form-control" Image>
+      
+                  </div>
+              </div>
+              <div class="model-footer">
+                  <button type="button" class="btn btn-primary" (click)="onUpdate()">Update</button>
+              </div>
+          </div>

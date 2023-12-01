@@ -1,0 +1,22 @@
+<div class="container text-center  " style="width: 100%;">
+          <div class="p-2">
+              <div class="row mt-2">
+                  <div class="col-lg-3 col-md-0" *ngFor="let products of productsArray">
+                      <div class="box-shadow">
+                          <div class="card mt-2">
+                              <img class="card-img-top img-fluid" src="{{products.images}}">
+                          </div>
+                          <div class="card-body">
+                              <h6 class="card-titel">{{products.name}}</h6>
+                              <h6 class="card-body">{{products.deliveryTimeSpan}}</h6>
+                              <h6 class="card-text">{{products.productDescription}}</h6>
+                              <p class="text-success ms-0">35% off<span class="p-3">{{products.price | currency:'INR'}}</span> </p>
+                              
+                          </div>
+                          <button class="btn btn-success" >ADD-TO-CART</button>
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
