@@ -1,0 +1,20 @@
+.container{
+          background-color: aquamarine;
+          max-width: 100%;
+       }
+       
+     
+       .img-fluid{
+           width: 320px;
+           height: 200px;
+           
+           border-radius: 5px;
+           background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+           
+       }
+       .card-body{
+           text-decoration: none;
+           color: blueviolet;
+       }

@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreateProductComponent } from './curd/create-product/create-product.component';
-import { UpdateProductComponent } from './curd/update-product/update-product.component';
+
 import { ProductListComponent } from './curd/product-list/product-list.component'
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { ProductListComponent } from './curd/product-list/product-list.component
     HeaderComponent,
     FooterComponent,
     CreateProductComponent,
-    UpdateProductComponent,
+  
     ProductListComponent
   ],
   imports: [

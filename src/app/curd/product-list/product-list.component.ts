@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -8,7 +9,20 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  _id:any;
   products:any[]=[];
+  productToUpdate:any = {
+    _id:"",
+    vendorName:"",
+    store_id:"",
+    name: "",
+    productDescription:"",
+    price:"",
+    categoryName:"",
+    deliveryTimeSpan:"",
+    sub_cat_name:"",
+    images: ""
+  };
   selectedUser:string='';
   constructor(private product:ProductService,private router:Router, private route:ActivatedRoute){}
   ngOnInit(): void {
@@ -29,14 +43,35 @@ export class ProductListComponent {
       this.product.deleteProduct(_id).subscribe((res:any)=>{
         this.loadProducts();
         if(res){
-          alert("User Creation Done");
-          this.router.navigate(['/productlist']);
+          alert("Product Delete Done");
+          this.router.navigate(['/products']);
          }
          else{
-          alert("Failed to create employee");
+          alert("Failed to delete employee");
           
          }
       })
     }
   }
+
+edit(products:any){
+  this.productToUpdate = products;
+}
+
+updateProduct(){
+  this.product.updateProduct(this.productToUpdate).subscribe((res)=>{
+    if(res){
+    
+      this.loadProducts();
+      alert("Update product successfully");
+      this.router.navigate(['/products']);
+     }
+     else{
+      alert("Failed to update product");
+      
+     }
+  
+   })
+}
+
 }
