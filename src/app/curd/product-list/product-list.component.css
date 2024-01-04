@@ -2,6 +2,14 @@
           width: 45px;
           height: 35px;
 }
-.input-group .form-control{
+.input-group{
           color: white;
+}
+.form-control{
+          color: white;
+          text-align: right;
+          background-color: blueviolet;
+          border: none;
+          font-size: 30px;
+          
 }

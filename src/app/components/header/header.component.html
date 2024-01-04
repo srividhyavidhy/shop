@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-success">
+<nav class="navbar navbar-expand-lg bg-info">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">E-shop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,19 +15,16 @@
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/admin">Admin</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Contact Us
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Login</a></li>
-                    <li><a class="dropdown-item" href="#">Register</a></li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                  </ul>
-                </li>
-               
-              </ul>
-           
+               </ul>
+           <form class="d-flex">
+            <button class="btn btn-primary round-button mx-2 name" *ngIf="isLoggedIn"><i class="bi bi-person-circle mx-1"></i>{{userInfo.name}}</button>
+            <button class="btn btn-outline-primary round-button mx-2" type="button"
+             *ngIf="!isLoggedIn" routerLink="/login">Login</button>
+            <button class="btn btn-success round-button" type="button" 
+            *ngIf="!isLoggedIn" routerLink="/signup">SignUp</button>
+            
+            <button class="btn btn-dander" *ngIf="isLoggedIn" (click)="Logoff()">Logout</button>
+          </form>
             </div>
           </div>
         </nav>

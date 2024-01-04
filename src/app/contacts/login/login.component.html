@@ -1,0 +1,24 @@
+<div class="container">
+          <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                      <div class="card shadow-lg p-5 mt-5 mb-5 text-center">
+                              <h4>Welcome Back</h4><hr>
+                              <div class="alert alert-success" role="alert">
+                                 Login Successfull! <a routerLink="login">Forget Password?</a>
+                              </div>
+                              <form class="text-left">
+                              <div class="form-group">
+                                  <label>Email</label>
+                                  <input type="email" class="form-control" placeholder="Email"  
+                                  [(ngModel)]="loginForm.email" name="email" > 
+                                  <label>Password</label>
+                                  <input type="password" class="form-control" placeholder="*******"
+                                  [(ngModel)]="loginForm.password" name="password" >     
+                              </div><br>
+                              <button class="btn btn-outline-primary btn-block" (click)="onLogin()">SignIn</button>
+                    </form>
+                      </div>
+                    </div>
+          </div>
+</div>
+

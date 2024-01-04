@@ -37,6 +37,11 @@ headers = new HttpHeaders({
   deleteProduct(_id:any):Observable<any>{
   return this.http.delete(`${this.apiUrl}/delete/${_id}`)
   }
+
+  
+  findByTitle(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/search-product`);
+  }
   
   searchFood(title: any): Observable<any> {
     return this.http.get<any>(`http://localhost:3000/api/foods/?title=${title}`);

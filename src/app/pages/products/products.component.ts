@@ -7,7 +7,11 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit{
-  productsArray:any
+  productsArray:any;
+  currentProduct: any = {};
+  currentIndex = -1;
+  search = '';
+
 constructor(private product:ProductService){}
 ngOnInit(): void {
   this.loadProducts();
@@ -17,5 +21,8 @@ loadProducts(){
     this.productsArray=res.data;
   });
  }
+ 
+
 
 }
+

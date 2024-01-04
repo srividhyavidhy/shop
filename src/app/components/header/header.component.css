@@ -7,3 +7,6 @@ nav{
 .navbar-nav .nav-item .nav-link{
           color: white;
 }
+.name{
+          border-radius: 50%;
+}
